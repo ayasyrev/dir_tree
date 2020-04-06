@@ -3,6 +3,7 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"create_sub_dirs": "00_dir_tree.ipynb",
+         "create_test_dir": "00_dir_tree.ipynb",
          "get_dirs_files": "00_dir_tree.ipynb",
          "tree": "00_dir_tree.ipynb"}
 
