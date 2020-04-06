@@ -55,7 +55,7 @@ Now we can use path:
 
 `tree(path)`
 
-And we can 'patch' Path as:
+And we can 'patch' Path as:  
 
 `Path.tree = tree'
 
