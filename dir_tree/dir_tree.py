@@ -28,7 +28,9 @@ def get_dirs_files(path):
     return sorted(res[True]), sorted(res[False])
 
 # Cell
-def tree(path, ident=0, print_files=False, num_files=3):
+def tree(path='.', ident=0, print_files=False, num_files=3):
+    '''Print dir tree. Input - str or Path-like obj.
+    If print_files is True, print files, limited to num_files.'''
     path = Path(path)
     dirs, files = get_dirs_files(path)
     print(' '*ident, f"{path.name}  - {len(dirs)} dirs {len(files)} files")
