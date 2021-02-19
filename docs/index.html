@@ -1,11 +1,14 @@
 ---
 
-title: dir_tree
+title: Dir_tree
+
 
 keywords: fastai
 sidebar: home_sidebar
 
 summary: "print directory tree"
+description: "print directory tree"
+nb_path: "nbs/index.ipynb"
 ---
 <!--
 
@@ -18,11 +21,14 @@ summary: "print directory tree"
 -->
 
 <div class="container" id="notebook-container">
-    {% raw %}
         
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Similar as tree in terminal.</p>
@@ -32,7 +38,7 @@ summary: "print directory tree"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Install">Install<a class="anchor-link" href="#Install">&#182;</a></h2>
+<h2 id="Install">Install<a class="anchor-link" href="#Install"> </a></h2>
 </div>
 </div>
 </div>
@@ -45,7 +51,7 @@ summary: "print directory tree"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-use">How to use<a class="anchor-link" href="#How-to-use">&#182;</a></h2>
+<h2 id="How-to-use">How to use<a class="anchor-link" href="#How-to-use"> </a></h2>
 </div>
 </div>
 </div>
@@ -56,12 +62,14 @@ summary: "print directory tree"
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dir_tree.dir_tree</span> <span class="kn">import</span> <span class="n">tree</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">dir_tree</span> <span class="kn">import</span> <span class="n">tree</span>
 </pre></div>
 
     </div>
@@ -69,6 +77,10 @@ summary: "print directory tree"
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -114,6 +126,8 @@ summary: "print directory tree"
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>You can sent string or Path object to tree function.</p>
@@ -121,6 +135,8 @@ summary: "print directory tree"
 </div>
 </div>
 </div>
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -134,6 +150,10 @@ summary: "print directory tree"
 </div>
 
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 
@@ -147,6 +167,8 @@ summary: "print directory tree"
 </div>
 
 </div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now we can use path:</p>
@@ -191,8 +213,16 @@ summary: "print directory tree"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>And better, if you use fastcore, you can patch it using @patch decorator.<br>
-I didnt use it becouse won't use any dependences.</p>
+<p>If you want look to files content, use 'print_files=True' argument.<br>
+It print files, limited to 'num_files' quantity.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In terminal it can be used as dir_tree command.<br>
+Now it don't accept arguments, it'll be fixed soon,</p>
 
 </div>
 </div>
@@ -200,12 +230,12 @@ I didnt use it becouse won't use any dependences.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now it has only base functionality.<br>
-In plans: ipywidgets and cl functionalitys.</p>
+It uses only standart library.
+In plans: ipywidgets and fix script functionalitys.</p>
 
 </div>
 </div>
 </div>
-    {% endraw %}
 </div>
  
 

@@ -11,7 +11,7 @@ entries:
       url: /
     - output: web,pdf
       title: dir_tree
-      url: /dir_tree
+      url: dir_tree.html
     output: web
     title: dir_tree
   output: web
