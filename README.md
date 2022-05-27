@@ -1,4 +1,4 @@
-# dir_tree
+# Dir_tree
 > print directory tree
 
 
@@ -13,7 +13,7 @@ Similar as tree in terminal.
 Import tree function:
 
 ```python
-from dir_tree.dir_tree import tree
+from dir_tree import tree
 ```
 
 ```python
@@ -63,8 +63,12 @@ Now we can use it as:
 
 `path.tree()`
 
-And better, if you use fastcore, you can patch it using @patch decorator.  
-I didnt use it becouse won't use any dependences.
+If you want look to files content, use 'print_files=True' argument.  
+It print files, limited to 'num_files' quantity.
+
+In terminal it can be used as dir_tree command.   
+Now it don't accept arguments, it'll be fixed soon,
 
 Now it has only base functionality.  
-In plans: ipywidgets and cl functionalitys.
+It uses only standard library.
+In plans: ipywidgets and fix script functionalities.
