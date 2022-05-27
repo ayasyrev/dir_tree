@@ -1,3 +1,2 @@
-__version__ = "0.0.1"
-from .dir_tree import tree, create_test_dir
-# __all__ = [tree, create_test_dir]
+from .dir_tree import tree, create_test_dir  # noqa F401
+from .version import __version__  # noqa F401

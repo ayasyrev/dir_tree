@@ -70,5 +70,5 @@ In terminal it can be used as dir_tree command.
 Now it don't accept arguments, it'll be fixed soon,
 
 Now it has only base functionality.  
-It uses only standart library.
-In plans: ipywidgets and fix script functionalitys.
+It uses only standard library.
+In plans: ipywidgets and fix script functionalities.
