@@ -21,8 +21,8 @@ from dir_tree import tree
 ```python
 tree('test_dir')
 ```
-???+ done "output"  
-    <pre> test_dir  - 3 dirs 0 files
+ 
+    test_dir  - 3 dirs 0 files
          sub_dir_1  - 4 dirs 0 files
              sub_dir_1_1  - 0 dirs 0 files
              sub_dir_1_2  - 0 dirs 0 files
