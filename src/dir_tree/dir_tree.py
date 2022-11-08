@@ -1,11 +1,17 @@
 import os
 from pathlib import Path
+from typing import List, Union
 
 
 __all__ = ["create_sub_dirs", "create_test_dir", "get_dirs_files", "tree"]
 
 
-def create_sub_dirs(path, num_sub_dirs, sub_dir_name="sub_dir", levels=1):
+def create_sub_dirs(
+    path: Path,
+    num_sub_dirs: int,
+    sub_dir_name: str = "sub_dir",
+    levels: int = 1,
+) -> None:
     for i in range(num_sub_dirs):
         sub_dir = path / (sub_dir_name + f"_{i + 1}")
         sub_dir.mkdir(exist_ok=True)
@@ -13,13 +19,18 @@ def create_sub_dirs(path, num_sub_dirs, sub_dir_name="sub_dir", levels=1):
             create_sub_dirs(sub_dir, i + 1 + num_sub_dirs, sub_dir.name, levels - 1)
 
 
-def create_test_dir(path="test_dir", num_sub_dirs=3, sub_dir_name="sub_dir", levels=1):
+def create_test_dir(
+    path: Union[str, Path] = "test_dir",
+    num_sub_dirs: int = 3,
+    sub_dir_name: str = "sub_dir",
+    levels: int = 1,
+) -> None:
     path = Path(path)
     path.mkdir(exist_ok=True)
     create_sub_dirs(path, num_sub_dirs, sub_dir_name, levels)
 
 
-def get_dirs_files(path):
+def get_dirs_files(path: Union[str, Path]) -> tuple[List[Path], List[Path]]:
     """Return tuple of lists -> directories and files"""
     res = {True: [], False: []}
     for dir_entry in os.scandir(Path(path)):
@@ -27,7 +38,12 @@ def get_dirs_files(path):
     return sorted(res[True]), sorted(res[False])
 
 
-def tree(path=".", ident=0, print_files=False, num_files=3):
+def tree(
+    path: Union[str, Path] = ".",
+    ident: int = 0,
+    print_files: bool = False,
+    num_files: int = 3,
+) -> None:
     """Print dir tree. Input - str or Path-like obj.
     If print_files is True, print files, limited to num_files."""
     path = Path(path)
